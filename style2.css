@@ -48,6 +48,13 @@ button:hover {
   transition: 1s ease-in-out;
 
 }
+b{
+  color:rgb(73, 73, 240);
+}
+span{
+  font-weight: 550;
+  color: blueviolet;
+}
 .card {
   font-size: 12px;
   border: none !important;

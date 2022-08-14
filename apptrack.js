@@ -1,13 +1,25 @@
 const { createApp } = Vue
 
+
+
 createApp({
+    
+    // components: {
+    //     vuejsDatepicker
+    // },
+    
     data() {
         return {
+
             title: 'Task tracker',
+            subTitle: 'Saved tasks',
             text: '',
             day: '',
+            datetime: '',
             reminder: false,
             showAddTask: false,
+            user: "",
+
 
             tasks: [
 
@@ -15,6 +27,7 @@ createApp({
                     id: 1,
                     text: 'Doctors Appointment',
                     day: 'August 15th at 2:30pm',
+                    user: 'Jerry Eni',
                     reminder: true,
 
                 },
@@ -23,6 +36,7 @@ createApp({
                     id: 2,
                     text: 'Play football',
                     day: 'August 15th at 2:30pm',
+                    user: 'Jerry Eni',
                     reminder: true,
                 },
 
@@ -30,6 +44,7 @@ createApp({
                     id: 3,
                     text: 'Wash cloths',
                     day: 'August 15th at 2:30pm',
+                    user: 'Jerry Eni',
                     reminder: false,
                 },
 
@@ -37,34 +52,6 @@ createApp({
             
         }
     },
-
-    // created() {
-    //     this.tasks = [
-
-    //         {
-    //             id: 1,
-    //             text: 'Doctors Appointment',
-    //             day: 'August 15th at 2:30pm',
-    //             reminder: true,
-    //         },
-
-    //         {
-    //             id: 1,
-    //             text: 'Play football',
-    //             day: 'August 15th at 2:30pm',
-    //             reminder: true,
-    //         },
-
-    //         {
-    //             id: 1,
-    //             text: 'Wash cloths',
-    //             day: 'August 15th at 2:30pm',
-    //             reminder: false,
-    //         },
-
-    //     ]
-    // },   
-
     methods: {
         onClick(showAddTask) {
             this.showAddTask = !showAddTask
@@ -91,6 +78,7 @@ createApp({
                 id: Math.floor(Math.random() * 100000),
                 text: this.text,
                 day: this.day,
+                user: this.user,
                 reminder: this.reminder
             }
 
@@ -101,10 +89,10 @@ createApp({
              this.reminder = false
         }
 
-    }
+    },
+
+
+   
 }).mount('#app')
 
-// const app = vue.createApp({
-// })
 
-// app.mount('#app ')
